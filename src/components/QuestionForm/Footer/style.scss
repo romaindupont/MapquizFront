@@ -1,0 +1,28 @@
+@use './../../../styles/vars';
+
+.footer {
+    font-family: 'Roboto', sans-serif;
+    
+    &-goodAnswer {
+        font-weight: normal;
+        font-family: 'Roboto', sans-serif;
+        color: black;
+    }
+}
+
+
+.button {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    border: solid #ea9c50 2px;
+    border-radius: 4px;
+    color: #ea9c50;
+    background-color: white;
+    margin: 1rem;
+    font-size: 1.5rem;
+    
+}
+  
+.button:hover {
+    background-color: lightcyan;
+}

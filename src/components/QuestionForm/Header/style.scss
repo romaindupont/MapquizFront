@@ -1,0 +1,46 @@
+@use './../../../styles/vars';
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+      
+      &-questionInfo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-around;
+      }
+
+      &-quitQuizButton {
+        list-style-type: none;
+        color: #ea9c50;
+        padding: 0.5rem;
+        border: 2px solid #ea9c50;
+        background-color: white;
+        border-radius: 4px;
+        width: 4rem;
+        position: relative;
+        top: -2rem;
+        left: -2rem;
+      }
+
+      &-question {
+        font-size: 1.5rem;
+      }
+      
+      &-questionDisplay {
+        margin-bottom: 0.5rem;
+      }
+      
+      &-image {
+        width: 100%;
+        max-width: 30%;
+        height: auto;
+        
+        @media only screen and (max-width: 700px) {
+          display: none;
+        }
+      }
+}

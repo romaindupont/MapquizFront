@@ -1,0 +1,67 @@
+@use './../../../../styles/vars';
+
+.questionField {
+  // border: solid #696795 2px; 
+  // border-radius: 5px;
+  margin: 4rem;
+
+}
+
+.answers {
+
+  &-subtitle {
+    margin-bottom: 0.5rem;
+  }
+
+  &-answer {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+.answer {
+  
+  &-li {
+    list-style-type: none;
+    color: #ea9c50;
+    padding: 0.8rem 1.2rem;
+    border: 2px solid #ea9c50;
+    border-radius: 4px;
+    margin: 0.5rem 1rem;
+    max-width: 25%;
+    cursor: pointer;
+
+    @media only screen and (max-width: 700px) {
+		  max-width: 90%;
+	  }
+  }
+
+  &-li--goodAnswer {
+    border: dashed;
+    background-color: lightgreen;
+    color: black;
+  }
+
+  &-li--badAnswer {
+    border: dashed;
+    background-color: lightcoral;
+    color: black;
+  }
+
+  &-li:hover {
+    background-color: lightcyan;
+  }
+
+  &-image {
+    // margin: 1rem auto;
+    display: block;
+    max-width: 10rem;
+    height: auto;
+
+      @media only screen and (max-width: 1045px) {
+		  display: none;
+	  }
+  }
+}

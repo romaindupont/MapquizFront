@@ -1,0 +1,300 @@
+@use './../../styles/vars';
+
+.app {
+  position: relative;
+  padding-right: 2rem;
+}
+
+.menu {
+    position:relative;
+    background-color: white;
+    margin-bottom: 5px;
+    
+    border-radius: 50%;
+    z-index: 3;
+    &:hover {
+        background-color: white;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;    
+    }
+    &:focus {
+      outline:none;
+    }
+    @media only screen and (min-width: 300px) {
+      width: 40px;
+      height: 40px;
+      margin-left: 2rem;
+      &:hover {
+        width: 50px;
+        height: 50px;
+      } 
+    }
+    @media only screen and (min-width: 420px) {
+      width: 40px;
+      height: 40px;
+      &:hover {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    @media only screen and (min-width: 690px) {
+      width: 60px;
+      height: 60px;
+      &:hover {
+        width: 70px;
+        height: 70px;
+      }
+    }
+    &-burger{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.75;
+        }
+
+        &-bar1 {
+            display: block;
+            background-color:#272566;
+            margin:6px 0;
+            transition:0.3s;
+            @media only screen and (min-width: 300px) {
+              width:22px;
+              height:4px;
+            }
+            @media only screen and (min-width: 420px) {
+              width:22px;
+              height:4px;
+            }
+            @media only screen and (min-width: 690px) {
+              width:32px;
+              height:5px;
+            }
+        }
+        &-bar2 {
+            background-color:#272566;
+            margin:6px 0;
+            transition:0.3s;   
+            @media only screen and (min-width: 300px) {
+              width:22px;
+              height:4px;
+            }
+            @media only screen and (min-width: 420px) {
+              width:22px;
+              height:4px;
+            }
+            @media only screen and (min-width: 690px) {
+              width:32px;
+              height:5px;
+            }
+        }
+        &-bar3 {
+            background-color:#272566;
+            margin:6px 0;
+            transition:0.3s; 
+            @media only screen and (min-width: 300px) {
+              width:22px;
+              height:4px;
+            }
+            @media only screen and (min-width: 420px) {
+              width:22px;
+              height:4px;
+            }
+            @media only screen and (min-width: 690px) {
+              width:32px;
+              height:5px;
+            } 
+        }
+    }
+    .menu-burger--open-bar2 {
+      opacity:0;
+    }
+    .menu-burger--open-bar1 {
+      transform:rotate(-45deg) translate(-9px, 6px);
+    }
+    .menu-burger--open-bar3 {
+      transform:rotate(45deg) translate(-8px, -8px);
+    }
+}
+
+.menu-modal {
+  position: absolute;
+  display: flex;
+  transform: translate(0%, 2%);
+  background-color: #696795;
+  border-radius: 50%;
+  z-index: 2;
+
+  @media only screen and (min-width: 300px) {
+    width: 40px;
+    height: 40px;
+    margin-left: 2rem;
+  }
+  @media only screen and (min-width: 420px) {
+    width: 40px;
+    height: 40px;
+  }
+  @media only screen and (min-width: 690px) {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.menu-modal--nav {
+  display: none;
+}
+
+.menu-modal--nav--open {
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+  color: #ea9c50;
+}
+
+.menu-modal--open {
+  transform: scale(2);
+    height: 98vh;
+    position: absolute;
+    right: 92px;
+    top: 0;
+    border-radius: 0;
+    transform-origin: bottom;
+    bottom: 0;
+    @media only screen and (min-width: 300px) {
+      width: 10rem;
+    }
+    @media only screen and (min-width: 420px) {
+      width: 13.5rem;
+    }
+    @media only screen and (min-width: 690px) {
+      width: 13.5rem;
+    }
+}
+
+.menu-modal--form {
+  display: grid;
+  margin-top: 3rem;
+}
+
+.menu-modal--label {
+  padding: 0 0 0.5rem 1rem;
+  @media only screen and (min-width: 300px) {
+    font-size: 8px;
+  }
+  @media only screen and (min-width: 420px) {
+    font-size: 13px;
+  }
+  @media only screen and (min-width: 690px) {
+    font-size: 13px;
+  }
+}
+
+.menu-modal--buton {
+  margin: 0.7rem 0 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 9px;
+  background-color: #ea9c50;
+  color: white;
+  padding: 0.2rem;
+    &:hover {
+      transform: scale(1.1);
+    }
+  @media only screen and (min-width: 300px) {
+    font-size: 8px;
+    width: 3rem;
+  }
+  @media only screen and (min-width: 420px) {
+    font-size: 10px;
+    width: 4rem;
+  }
+  @media only screen and (min-width: 690px) {
+    font-size: 10px;
+    width: 4rem;
+  }
+}
+
+.menu-modal--li {
+  text-align: center;
+  list-style: none;
+  padding-left: 1rem;
+  &:hover {
+    transform: scale(1.1);
+  }
+  @media only screen and (min-width: 300px) {
+    padding-top: 0.7rem;
+    font-size: 7px;
+    margin-left: 3rem; 
+  }
+  @media only screen and (min-width: 420px) {
+    padding-top: 2rem;
+    font-size: 10px;
+    margin-left: 3rem;
+  }
+  @media only screen and (min-width: 690px) {
+    padding-top: 2rem;
+    font-size: 13px;
+  }
+}
+
+.menu-modal--welcome {
+  text-align: center;
+  font-weight: bold;
+  @media only screen and (min-width: 300px) {
+    padding-top: 0.7rem;
+    font-size: 7px;
+    margin-left: 3rem;
+  }
+  @media only screen and (min-width: 420px) {
+    padding-top: 2rem;
+    font-size: 10px;
+    margin-left: 3rem;
+  }
+  @media only screen and (min-width: 690px) {
+    padding-top: 2rem;
+    font-size: 13px;
+  }
+}
+
+
+.menu-modal--link {
+  color: #ea9c50;
+}
+
+.menu-modal--account {
+  padding-left: 1rem;
+  font-size: 7px;
+  color: #ea9c50;
+}
+
+.menu-modal--deconnexion{
+  margin: 100% 0 0.5rem 4.5rem;
+  cursor: pointer;
+  border: none;
+  font-size: 10px;
+  border-radius: 9px;
+  background-color: #FE4265;
+  color: white;
+  padding: 0.3rem;
+    &:hover {
+      transform: scale(1.1);
+    }
+}
+.Toastify__toast {
+  background-color: #ea9c50;
+  color: #696795;
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: bold;
+}
+.Toastify__progress-bar {
+background: #696795;
+}
+
